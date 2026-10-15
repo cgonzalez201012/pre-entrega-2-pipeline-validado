@@ -3,7 +3,7 @@
 Para qué sirve:
   * Los tests pueden probar reintentos, JSON mal formado, cortes por max_tokens, etc.
     sin gastar API ni depender de que el modelo real falle "a pedido".
-  * `python main.py --simular-fallo` muestra el reintento en vivo, de forma reproducible.
+  * `python main.py --simular reintento` muestra el reintento en vivo, de forma reproducible.
 
 Es un BaseChatModel de LangChain de verdad: pasa por el mismo .with_structured_output(),
 el mismo parser de Pydantic y el mismo .with_retry() que un modelo real. Lo único falso

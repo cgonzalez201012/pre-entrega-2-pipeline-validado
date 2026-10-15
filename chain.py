@@ -153,8 +153,8 @@ def build_model(
     if provider == "anthropic":
         from langchain_anthropic import ChatAnthropic
 
-        # Sin temperature: los modelos Claude recientes ya no aceptan valores
-        # distintos del default en varios casos (ver README).
+        # Sin temperature: el SDK de Anthropic instalado (1.14) no lo incluye entre los
+        # parámetros de messages.create() (ver README).
         return ChatAnthropic(model=nombre, max_tokens=max_tokens, timeout=timeout_s, max_retries=0)
 
     if provider == "openai":

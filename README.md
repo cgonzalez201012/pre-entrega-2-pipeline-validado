@@ -111,7 +111,8 @@ chain = PROMPT_EXTRACCION | modelo_validado          # prompt | model.with_struc
 
 ## Instalación
 
-Requiere Python 3.12 o superior.
+Requiere Python 3.12 o superior. Probado con Python 3.12, 3.13 y 3.14 (langchain-core 1.6.11,
+langchain-anthropic 1.7.6, langchain-openai 1.7.2, pydantic 2.14.1).
 
 ```bash
 python3 -m venv .venv
@@ -243,6 +244,6 @@ Usan `ModeloSimulado`, así que no gastan API.
 | `LLM_TIMEOUT_S` | `60` | Timeout por llamada, en segundos |
 | `LLM_MAX_INTENTOS` | `3` | Intentos totales (el primero + los reintentos) |
 
-> En Anthropic no se envía `temperature`: el SDK `anthropic` actual ya no lo acepta en
-> `messages.create()` y varios modelos nuevos solo admiten el valor por defecto. En OpenAI se usa
-> `temperature=0` para que la extracción sea lo más determinista posible.
+> En Anthropic no se envía `temperature`: el SDK `anthropic` instalado (1.14) no lo incluye entre los
+> parámetros de `messages.create()`. En OpenAI se usa `temperature=0` para que la extracción sea lo
+> más determinista posible.

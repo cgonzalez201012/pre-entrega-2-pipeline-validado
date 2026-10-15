@@ -111,9 +111,9 @@ casi nunca ocurren a pedido: JSON incompleto, enum inválido, corte por `max_tok
 Además de los tests, verificamos el pipeline con los SDK reales de Anthropic y OpenAI contra un
 servidor HTTP local que respondía esos mismos escenarios (200, 429, 500, 401, `max_tokens`).
 
-## 9. Qué te toca verificar vos
+## 9. Cómo verificarlo vos mismo
 
-Todo lo anterior está probado sin llamar a un modelo real. Antes de entregar, en tu Mac:
+Todo esto se probó con tests (sin API) y también con el modelo real. Para repetirlo en tu Mac:
 
 ```bash
 pytest                       # 80 passed

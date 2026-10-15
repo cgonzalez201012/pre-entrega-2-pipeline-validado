@@ -18,7 +18,9 @@ comprobarlo.
 - [x] Función asíncrona `process_text()` con `.ainvoke()` y logs de validación.
 - [x] Mini-script de prueba que ejecute un ejemplo (`main.py`).
 - [x] README con el ejemplo de salida JSON y las instrucciones (la consigna indica que no hace falta PDF ni informe).
-- [ ] **Pendiente de Cris**: subir el repo a GitHub (público, sin `.env`) y pegar la URL en la plataforma.
+- [x] Prueba de estrés (paso sugerido 5 de la consigna): `python main.py --estres` con un texto ambiguo, uno sin
+  tecnologías y uno casi vacío. La corrida real y lo que reveló están en el README ("Prueba de estrés").
+- [x] Repositorio público en GitHub, sin `.env`. Verificado con un `git clone` limpio, entorno nuevo y `pytest` (80 passed).
 
 ## Errores comunes de la consigna, uno por uno
 
